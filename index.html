@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+ 
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bootstrap-3.2.0.min.js"></script>
+<script type="text/javascript" src="/dist/js/password-score.js"></script>
+<script type="text/javascript" src="/dist/js/password-score-options.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap-strength-meter.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div class="alert alert-success" role="alert">Ne dilvuguez jamais votre mot de passe ! 
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example-progress-bar-hierarchy').strengthMeter('progressBar', {
+                container: $('#example-progress-bar-hierarchy-container'),
+                hierarchy: {
+                    '0': 'progress-bar-danger',
+                    '10': 'progress-bar-warning',
+                    '15': 'progress-bar-success'
+                }
+            });
+        });
+    </script>
+    
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="form-label col-sm-2">Password</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="Password ..." class="form-control" id="example-progress-bar-hierarchy" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label col-sm-2">Password Strength</label>
+            <div class="col-sm-4" id="example-progress-bar-hierarchy-container">
+     
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+

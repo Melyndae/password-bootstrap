@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+ 
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-3.2.0.min.js"></script>
+    <script type="text/javascript" src="/dist/js/password-score.js"></script>
+    <script type="text/javascript" src="/dist/js/password-score-options.js"></script>
+    <script type="text/javascript" src="dist/js/bootstrap-strength-meter.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            console.log('R');
+            $('#example-text-hierarchy-input').strengthMeter('text', {
+                container: $('#example-text-hierarchy-text'),
+                hierarchy: {
+                    '0': ['text-danger', 'Think about a stronger password!'],
+                    '5': ['text-warning', 'Well, you are doing better ...'],
+                    '10': ['text-warning', 'Keep going ...'],
+                    '15': ['text-success', 'Ok, this will do!']
+                }
+            });
+        });
+    </script>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="form-label col-sm-2">Password</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="Password ..." class="form-control" id="example-text-hierarchy-input" />
+            </div>
+            <div class="col-sm-6" id="example-text-hierarchy-text" style="font-weight:bold;padding:6px 12px;">
+     
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
